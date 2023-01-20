@@ -1,0 +1,19 @@
+.image_pc{
+	display: initial;
+	width: 100%;
+}
+
+.image_phone{
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.image_phone{
+		display: initial;
+		width: 100%;
+	}
+	.image_pc{
+		display: none;
+	}
+}
