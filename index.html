@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kwiecień Tattoo Studio</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="background"></div>
-	<div class="main">
+	<div id="loading">
+		<p>Loading, please wait...</p>
+	</div>
+	<div id="background"></div>
+	<div id="main">
 		<div class="section">
 			<div id="welcome">
 				<div class="logo-l">
@@ -34,9 +39,9 @@
 				<div class="logo-s">
 					<img src="./images/logo_s.png">
 				</div>
-				<p style="font-size: 30px; font-weight: bold;">REGULAMIN</p>
+				<p style="font-size: 30px; font-weight: bold; text-align: center;">REGULAMIN</p>
 				<ol>
-					<li>Dokonując wstępnej rezerwacji terminu zobowiązany_a jesteś do wpłacenia opłaty rezerwacyjnej w wysokości ustalonej z osobą tatuującą. Na wpłatę czekamy 4 dni.  Zadatek jest bezzwrotny, ale jest możliwość przeniesienia go jednokrotnie na inny termin minimum 4 dni przed pierwotnie ustaloną datą. Brak stawienia się w umówionym terminie jest równoznaczne z utratą zadatku. Zadatek jest częścią ceny końcowej tatuażu. Pamiętaj, że dokonanie rezerwacji jest równoznaczne z akceptacją naszego regulaminu.</li>
+					<li>Dokonując wstępnej rezerwacji terminu zobowiązany/-a jesteś do wpłacenia opłaty rezerwacyjnej w wysokości ustalonej z osobą tatuującą. Na wpłatę czekamy 4 dni.  Zadatek jest bezzwrotny, ale jest możliwość przeniesienia go jednokrotnie na inny termin minimum 4 dni przed pierwotnie ustaloną datą. Brak stawienia się w umówionym terminie jest równoznaczne z utratą zadatku. Zadatek jest częścią ceny końcowej tatuażu. Pamiętaj, że dokonanie rezerwacji jest równoznaczne z akceptacją naszego regulaminu.</li>
 					<li>Jako Studio mamy prawo do zmiany zarezerwowanego prze Ciebie terminu. W przypadku braku akceptacji przez Ciebie nowego terminu, zwrócimy Ci zadatek. </li>
 					<li>Ceny wykonania zabiegu tatuażu ustalane są indywidualnie. Opłata minimalna to 300 zł. Każdy projekt wyceniany jest indywidualnie, a cena uzależniona jest od wielkości, miejsca wykonania i stopnia skomplikowania tatuażu. </li>
 					<li>Projekt jest do wglądu w dniu sesji. Wtedy jest również czas na ewentualne poprawki i dopasowanie do anatomii ciała. W przypadku większych, bardziej skomplikowanych tatuaży proponujemy Ci konsultację przed umówionym terminem, jednak nie jest ona obowiązkowa. Przed przystąpieniem do zabiegu musisz wypełnić ankietę dotyczącą Twojego stanu zdrowia, a także obowiązkowo zapoznać się z ewentualnymi konsekwencjami pozabiegowymi, a także procedurą pielęgnacji tatuażu.</li>
@@ -65,9 +70,9 @@
 					Studio znajduje się w Gdańsku, w dzielnicy Wrzeszcz.<br>
 					Adres to <a href="https://www.google.com/maps/place/Juliusza+Kossaka+7%2F2a,+80-249+Gda%C5%84sk/@54.3746967,18.607771,17z/data=!4m5!3m4!1s0x46fd7493e381ce8b:0x8ca429fb9076a441!8m2!3d54.3746796!4d18.608068?entry=ttu" target="_blank">Kossaka 7/2a.</a>
 				</p>
-				<p>Wejście jest bezpośrednio z ulicy, po prawej stronie kamienicy. Przy furtce znajduje się domofon z jednym przyciskiem, po przejściu przez futkę idziemy po kilku stopniach w górę (wyższy parter) i voila- jesteśmy na miejscu.</p>
+				<p>Wejście jest bezpośrednio z ulicy, po prawej stronie kamienicy. Przy furtce znajduje się domofon z jednym przyciskiem, po przejściu przez futkę idziemy po kilku stopniach w górę (wyższy parter) i voila - jesteśmy na miejscu.</p>
 				<div class="grid">
-					<div class="column1">
+					<div class="column1-p1">
 						<p>
 							AUTOBUS<br>
 							Przystanek Sobótki 01 – 3 min, 250m  
@@ -80,6 +85,8 @@
 							SKM/POCIĄG<br>
 							Przystanek Gdańsk- Wrzeszcz- 12min, 1000m  
 						</p>
+					</div>
+					<div class="column1-p2">
 						<p>
 							SAMOCHÓD<br>
 							Pod studiem znajdują się płatne miejsca parkingowe (wzdłuż ulicy). Nieopodal znajduje się też centrum handlowe Manhattan, gdzie jest płatny parking podziemny.
@@ -99,7 +106,7 @@
 				<div class="logo-s">
 					<img src="./images/logo_s.png">
 				</div>
-				<p style="font-size: 30px; font-weight: bold;">JAK SIĘ PRZYGOTOWAĆ DO TATUAŻU?</p>
+				<p style="font-size: 30px; font-weight: bold; text-align: center;">JAK SIĘ PRZYGOTOWAĆ DO TATUAŻU?</p>
 				<ol>
 					<li>Przeczytać uważnie regulamin, wysłany przez osobę tatuującą.</li>
 					<li>Na tatuaż przychodzimy trzeźwi i nie pod wpływem substancji psychoaktywnych typu narkotyki.</li>
@@ -112,7 +119,7 @@
 					<li>Przed sesją postaraj się wyspać i zjedz śniadanie.</li>
 					<li>Zabierz ze sobą coś słodkiego do jedzenia (batonik, czekolada, cola itp.). Jeśli planujesz sesję całodzienną pomyśl o obiedzie. Tatuowanie jest wysiłkiem dla organizmu i warto jest zadbać o poziom cukru we krwi.</li>
 					<li>Na sesje przychodzimy bez osób towarzyszących. Jeśli bardzo musisz kogoś zabrać to tylko na czas przygotowania projektu i odbicia kalki, jednak później wolimy, aby osoba towarzysząca opuściła studio.</li>
-					<li>Nie planuj żadnych aktywności po tatuażu. Czasem sesja się przedłuża, więc lepiej nie mieć żadnych ważdych zobowiązać tego samego dnia. Możesz czuć się również zmęczony/a i osłabiony/a.</li>
+					<li>Nie planuj żadnych aktywności po tatuażu. Czasem sesja się przedłuża, więc lepiej nie mieć żadnych ważdych zobowiązać tego samego dnia. Możesz czuć się również zmęczony/-a i osłabiony/-a.</li>
 					<li>Płatność preferowana: gotówka, ewentualnie BLIK.</li>
 				</ol>
 			</div>
@@ -122,7 +129,7 @@
 				<div class="logo-s">
 					<img src="./images/logo_s.png">
 				</div>
-				<p style="font-size: 30px; font-weight: bold;">JAK DBAĆ O TATUAŻ?</p>
+				<p style="font-size: 30px; font-weight: bold; text-align: center;">JAK DBAĆ O TATUAŻ?</p>
 				<p style="font-size: 25px; font-weight: bold;">Jeśli tatuaż zabezpieczony jest second skinem:</p>
 				<ol>
 					<li>Po max 48h delikatnie i powoli odklej folię, cały czas trzymając ją pod wodą.</li>
@@ -152,12 +159,12 @@
 				<p style="font-size: 25px; font-weight: bold;">Czego nie można?</p>
 				<ul>
 					<li>Absolutny zakaz saun, basenów, kąpieli w zbiornikach wodnych, solarium do całkowitego zagojenia (3-4tygodnie).</li>
-					<li>Umiarkowany zakaz sportu, bądź rozsądna_y, odpuść sobie treningi na min. tydzień, a jeśli tatuaż jest większych rozmiarów lub zawiera dużo czerni- na dłużej, do 3-4 tygodni.</li>
+					<li>Umiarkowany zakaz sportu, bądź rozsądny/-a, odpuść sobie treningi na min. tydzień, a jeśli tatuaż jest większych rozmiarów lub zawiera dużo czerni - na dłużej, do 3-4 tygodni.</li>
 					<li>Nie używaj octaniseptu, tibioticu, alantaniu ani innych rzeczy, nieprzeznaczonych do gojenia tatuaży.</li>
 					<li>Nie drap, nie skub, nie odrywaj strupków.</li>
 					<li>Nie dotykaj tatuażu brudnymi rękoma, zachowaj ostrożność przy kontaktach ze zwierzętami.</li>
 					<li>Pamiętaj, że tatuaż nie lubi słońca. Podczas gojenia staraj się osłaniać tatuaż  przewiewną odzieżą, a po zagojeniu używaj kremów z filtrem (najlepiej 50+).</li>
-					<li>Jeśli nadal masz jakieś wątpliwości- nie bój się zapytać. </li>
+					<li>Jeśli nadal masz jakieś wątpliwości - nie bój się zapytać. </li>
 				</ul>
 			</div>
 		</div>
